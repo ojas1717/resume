@@ -8,9 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --primary-gradient: linear-gradient(to right, #2C3E50, #34495E);
+      --primary-gradient: linear-gradient(to bottom, #2C3E50, #34495E);  /* Dark gradient */
+      --highlight-gradient: linear-gradient(to right, #1ABC9C, #16A085);  /* Teal gradient for buttons */
       --card-bg: rgba(255, 255, 255, 0.85);
-      --text-color: #1a1a1a;
+      --text-color: #000000;  /* Black text */
+      --secondary-text-color: #BDC3C7;  /* Soft grey for secondary text */
       --card-radius: 16px;
       --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
@@ -115,6 +117,36 @@
       border-radius: var(--card-radius);
       padding: 1rem;
       box-shadow: var(--card-shadow);
+    }
+
+    /* Buttons/Highlights */
+    button, .highlight {
+      background: var(--highlight-gradient);
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover, .highlight:hover {
+      background: linear-gradient(to right, #16A085, #1ABC9C);
+    }
+
+    /* Secondary Text */
+    h2, h3, .subheading {
+      color: var(--secondary-text-color);
+    }
+
+    /* Links */
+    a {
+      color: #1ABC9C;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #16A085;
     }
 
     footer {
