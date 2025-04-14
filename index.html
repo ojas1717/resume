@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ojas Singh - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleTheme() {{ document.body.classList.toggle('light-theme'); }}
+  </script>
+  <style>html {{ scroll-behavior: smooth; }}</style>
+</head>
+<body>
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">Ojas Singh</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="hero">
+      <h2>I’m <span class="typewriter-text"></span></h2>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Ojas Singh, a stock market enthusiast with a knack for entrepreneurship.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="scrollable-section">
+      <ul>
+        <li><strong>Website Developer</strong> – Created <a href="https://locogames.com" target="_blank">locogames.com</a> to host online games for users.</li>
+        <li><strong>Game Developer</strong> – Built a Brick Breaker replica using Scratch.</li>
+        <li><strong>Quant Dev</strong> – Currently working on AI-powered indicators for TradingView.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="scrollable-section">
+      <ul>
+        <li><strong>The Khaitan School, Noida</strong> – 2008 to 2022</li>
+        <li><strong>Delhi University</strong> – BMS (2024–2027)</li>
+        <li><strong>IIM Bangalore</strong> – BBADBE (2024–2027)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Locogames</h3>
+        <p>Created a website that hosted multiple online games for users to play.</p>
+      </div>
+      <div class="card">
+        <h3>Brick Breaker</h3>
+        <p>Built a classic brick breaker game using Scratch.</p>
+      </div>
+      <div class="card">
+        <h3>AI Indicators</h3>
+        <p>Currently developing AI-powered indicators for TradingView.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ojas1717/" target="_blank">linkedin.com/in/ojas1717</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ojas Singh. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const text = ["a Web Developer.", "a Stock Market Enthusiast.", "an Entrepreneur."];
+    let index = 0, charIndex = 0;
+    const el = document.querySelector(".typewriter-text");
+    function typeWriter() {{
+      if (charIndex < text[index].length) {{
+        el.innerHTML += text[index].charAt(charIndex++);
+        setTimeout(typeWriter, 100);
+      }} else {{
+        setTimeout(() => {{ el.innerHTML = ""; charIndex = 0; index = (index + 1) % text.length; typeWriter(); }}, 1500);
+      }}
+    }}
+    document.addEventListener("DOMContentLoaded", typeWriter);
+  </script>
+</body>
+</html>
